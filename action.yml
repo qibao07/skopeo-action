@@ -1,0 +1,11 @@
+name: 'Skopeo Action'
+description: 'Skopeo Action'
+inputs:
+  cmd:
+    required: true
+    default: 'skopeo -v'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cmd }}
