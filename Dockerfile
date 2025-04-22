@@ -1,5 +1,7 @@
 FROM quay.io/skopeo/stable:latest
 
+RUN microdnf install -y gawk
+
 WORKDIR /usr/src
 
 COPY entrypoint.sh .
